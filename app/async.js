@@ -7,7 +7,10 @@ define([ 'jquery' ], function($) {
     },
 
     manipulateRemoteData : function(url) {
-
+    	// var request = new XMLHttpRequest();
+    	// request.open("GET", url, false);
+    	// return request;
+    	
     }
   };
 });
