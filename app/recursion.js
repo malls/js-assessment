@@ -9,7 +9,7 @@ define(function() {
     permute: function(arr) {
     	var retArr = [];
     	var per = function(startArr, endArr){
-    		for(var i = 0; i < endArr.length, i++){
+    		for(var i = 0; i < endArr.length; i++){
     			if(endArr.length > 1) {
     				(function(){
     					var newArr = startArr.slice();

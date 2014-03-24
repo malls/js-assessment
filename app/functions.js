@@ -12,14 +12,17 @@ define(function() {
     },
 
     functionFunction : function(str) {
-        var funfun = function(x){
-            return str + ", " + x;
+        var ret = function(str2){
+            return str + ", " + str2;
         }
-        return funfun;
+        return ret;
     },
 
     makeClosures : function(arr, fn) {
-
+        return arr.map(function(x){
+            return function(){return fn(x)};
+        });
+      
     },
 
     partial : function(fn, str1, str2) {
@@ -34,11 +37,19 @@ define(function() {
     },
 
     useArguments : function() {
-
+        var x = Array.prototype.slice.apply(arguments);
+        var total = 0;
+        for(var i = 0; i < x.length; i++){
+            total += x[i];
+        }
+        return total;
     },
 
     callIt : function(fn) {
-
+        var x = Array.prototype.slice.apply(arguments);
+        var y = Array.prototype.slice.apply(arguments);
+        y.splice(0,1);
+        x[0].apply(null, y);
     },
 
     partialUsingArguments : function(fn) {
