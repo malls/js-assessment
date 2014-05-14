@@ -16,8 +16,8 @@ define(function() {
     },
 
     multiply: function(a, b) {
-
+        var blen = b.toString().split('.')[1].length;
+        return Number((a * b).toFixed(blen));
     }
   };
 });
-

@@ -46,10 +46,9 @@ define(function() {
     },
 
     callIt : function(fn) {
-        var x = Array.prototype.slice.apply(arguments);
         var y = Array.prototype.slice.apply(arguments);
         y.splice(0,1);
-        x[0].apply(null, y);
+        fn.apply(null,y);
     },
 
     partialUsingArguments : function(fn) {

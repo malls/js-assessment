@@ -7,9 +7,8 @@ define([ 'jquery' ], function($) {
     },
 
     manipulateRemoteData : function(url) {
-    	// var request = new XMLHttpRequest();
-    	// request.open("GET", url, false);
-    	// return request;
+    	var request = new XMLHttpRequest();
+    	request.open("get", url, true).then(return request);
     	
     }
   };
